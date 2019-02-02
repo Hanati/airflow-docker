@@ -1,0 +1,12 @@
+version: '3'
+services:
+  airflow:
+    image: 10.99.195.7:8080/airflow
+    ports:
+      - 30960:8080
+    volumes:
+      - ~/.ssh:/root/.ssh
+      - ./airflow:/home/airflow
+    environment:
+      - http_proxy=${http_proxy}
+      - https_proxy=${http_proxy}
