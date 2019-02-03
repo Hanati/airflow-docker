@@ -38,7 +38,7 @@ RUN pip3 install apache-airflow pymongo pywebhdfs
 
 WORKDIR /home/airflow
 
-ADD airflow.cfg /home/airflow/dags/
+ADD airflow.cfg /home/airflow/
 ADD bootstrap.sh /etc/airflow/
 
 EXPOSE 8080
